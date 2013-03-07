@@ -95,7 +95,7 @@ class Fpdi extends FpdfTpl
      */
     protected function _getPdfParser($filename)
     {
-        return new PdfParser($filename, $this);
+        return new FpdiPdfParser($filename, $this);
     }
 
     /**
