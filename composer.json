@@ -1,0 +1,31 @@
+{
+    "name": "piotr-m/pdf-merger",
+    "description": "PHP PDF merging library",
+    "version": "0.0.1",
+    "type": "library",
+    "keywords": ["pdf"],
+    "time": "2013-03-07",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Olivier PLATHEY",
+            "role": "developer"
+        },
+        {
+            "name": "Setasign - Jan Slabon",
+            "role": "developer"
+        },
+        {
+            "name": "Peter",
+            "email": "piotr-m@piotr-m.net",
+            "role": "maintainer"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "PDFMerger\\": "src/",
+            "Fpdf\\": "src/",
+            "Fpdi\\": "src/"
+        }
+    }
+}
