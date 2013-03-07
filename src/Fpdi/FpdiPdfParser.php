@@ -140,7 +140,7 @@ class FpdiPdfParser extends PdfParser
      *
      * @param array $obj Array of pdf-data
      */
-    public function _getPageResources ($obj) { // $obj = /Page
+    protected function _getPageResources ($obj) { // $obj = /Page
         $obj = $this->pdf_resolve_object($this->c, $obj);
 
         // If the current object has a resources
@@ -193,7 +193,7 @@ class FpdiPdfParser extends PdfParser
      * @param  array $content_ref
      * @return array
      */
-    public function _getPageContent($content_ref)
+    protected function _getPageContent($content_ref)
     {
         $contents = array();
 
@@ -219,7 +219,7 @@ class FpdiPdfParser extends PdfParser
      * @param  array  $obj
      * @return string
      */
-    public function _rebuildContentStream($obj)
+    protected function _rebuildContentStream($obj)
     {
         $filters = array();
 
@@ -339,7 +339,7 @@ class FpdiPdfParser extends PdfParser
      * @param array a /Page
      * @return array
      */
-    public function _getPageBoxes($page, $k)
+    protected function _getPageBoxes($page, $k)
     {
         $boxes = array();
 
@@ -363,7 +363,7 @@ class FpdiPdfParser extends PdfParser
         return $this->_getPageRotation($this->pages[$pageno - 1]);
     }
 
-    public function _getPageRotation($obj) { // $obj = /Page
+    protected function _getPageRotation($obj) { // $obj = /Page
         $obj = $this->pdf_resolve_object($this->c, $obj);
         if (isset ($obj[1][1]['/Rotate'])) {
             $res = $this->pdf_resolve_object($this->c, $obj[1][1]['/Rotate']);
